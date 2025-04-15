@@ -1,0 +1,25 @@
+{
+    "name": "top-inventory-application",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "scripts": {
+        "dev": "node --watch server.js",
+        "start": "node server.js"
+    },
+    "keywords": [],
+    "author": "Tuhin Das",
+    "license": "ISC",
+    "dependencies": {
+        "dotenv": "^16.5.0",
+        "ejs": "^3.1.10",
+        "express": "^5.1.0",
+        "express-validator": "^7.2.1",
+        "pg": "^8.14.1"
+    },
+    "devDependencies": {
+        "@types/express": "^5.0.1",
+        "@types/pg": "^8.11.13",
+        "prettier": "^3.5.3"
+    }
+}
