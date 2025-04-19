@@ -1,4 +1,85 @@
 :root {
     font-size: 16px;
     font-family: "Markazi Text";
+    color: #efe1d1;
+    --bg: #331d2c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0rem 1rem;
+    background-color: var(--bg);
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 0.8rem;
+}
+
+a {
+    text-decoration: none;
+    color: #a78295;
+    transition: color 0.12s ease-in-out;
+}
+
+a:hover,
+a:focus {
+    color: #efe1d1;
+}
+
+a:focus {
+    outline: none;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: normal;
+}
+
+header {
+    padding: 2rem;
+}
+
+.fa-plus {
+    font-size: 0.6rem;
+}
+
+h2 {
+    font-size: 1.2rem;
+}
+
+p {
+    color: #a78295;
+}
+
+details {
+    padding: 0.5rem 1rem;
+    background-color: #3f2e3e;
+    border-radius: 5px;
+}
+
+summary {
+    color: #a78295;
+    transition: color 0.1s ease-in-out;
+}
+
+summary::marker {
+    font-size: 0.6rem;
+}
+
+summary:hover {
+    cursor: pointer;
+    color: #efe1d1;
 }

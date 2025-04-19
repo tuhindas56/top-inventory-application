@@ -1,19 +1,18 @@
 require("dotenv").config()
 
 const express = require("express")
-const { handle404, handleError } = require("./controllers/handleErrors.js")
+const app = express()
 
 const PORT = process.env.PORT || 8080
 
-const app = express()
+const homeRouter = require("./routes/homeRouter.js")
+const { handle404, handleError } = require("./controllers/handleErrors.js")
 
 app.set("view engine", "ejs")
 app.use(express.urlencoded({ extended: true }))
 app.use(express.static("public"))
 
-app.get("/", (req, res) => {
-    res.render("index")
-})
+app.use("/", homeRouter)
 
 app.use(handle404)
 app.use(handleError)
