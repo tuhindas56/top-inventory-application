@@ -9,27 +9,7 @@
   </header>
   <main>
     <h2>Books in Category</h2>
-    <% if(locals.items) {%>
-    <ul>
-      <% for (let { author, title, pages, quantity } of locals.items){ %>
-      <li>
-        <details>
-          <summary>
-            <i><%= title %> by <%= author %></i>
-          </summary>
-          <p>
-            No. of pages: <%= pages %>
-          </p>
-          <p>
-            Available quantity: <%= quantity %>
-          </p>
-        </details>
-      </li>
-      <% } %>
-    </ul>
-    <% } else {%>
-    <p>No books in this category.</p>
-    <% } %>
+    <%- include('./partials/book.ejs', { items: locals.items }) %>
   </main>
 
 </body>
