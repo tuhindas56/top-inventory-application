@@ -1,9 +1,9 @@
 function handle404(req, res, next) {
-    res.status(404).send("Page not found")
+    res.status(404).render("error")
 }
 
-function handleError(err, req, res, next) {
-    res.sendStatus(500)
+function handleError(errors, req, res, next) {
+    res.render("error", { errors })
 }
 
 module.exports = { handle404, handleError }

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("./partials/head.ejs", { title: "An error has ocurred" }) %>
+
+<body>
+    <% if(locals.errors) {%>
+        <% if(Array.isArray(locals.errors)) { %>
+            <p class="error"><%- errors[0].msg %></p>
+        <% } else { %>
+            <p class="error"><%= errors %></p>
+        <% } %>
+    <% } else { %>
+        <p class="error">Page not found</p>
+    <% } %>
+</body>
+</html>
