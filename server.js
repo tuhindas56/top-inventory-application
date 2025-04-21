@@ -6,6 +6,7 @@ const app = express()
 const PORT = process.env.PORT || 8080
 
 const homeRouter = require("./routes/homeRouter.js")
+const categoryRouter = require("./routes/categoryRouter.js")
 const { handle404, handleError } = require("./controllers/handleErrors.js")
 
 app.set("view engine", "ejs")
@@ -13,6 +14,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.static("public"))
 
 app.use("/", homeRouter)
+app.use("/category", categoryRouter)
 
 app.use(handle404)
 app.use(handleError)

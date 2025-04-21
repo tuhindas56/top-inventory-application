@@ -11,8 +11,8 @@
     <h2>Books by genre</h2>
     <% if(locals.categories) {%>
     <ul>
-      <% for (let { category_id, book_category } of locals.categories){ %>
-      <li><a href="/category/<%= category_id %>"><%= book_category %></a></li>
+      <% for (let { book_category, slug } of locals.categories){ %>
+      <li><a href="/category/<%= slug %>"><%= book_category %></a></li>
       <% } %>
       <li><a href="/category/add"><i class="fa-solid fa-plus"></i> add a category</a></li>
     </ul>
