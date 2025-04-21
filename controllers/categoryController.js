@@ -20,7 +20,7 @@ const getCategory = [
                 const items = await getBooksOfCategory(category)
                 res.render("category", { category, items: items.length > 0 ? items : undefined })
             } else {
-                next()
+                next("Category does not exist.")
             }
         } else {
             next(validationErrors.array())
